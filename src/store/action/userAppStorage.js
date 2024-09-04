@@ -43,7 +43,6 @@ let retrievedAdminStoredToken = () => {
   }
 }
 
-//https://back-end-great.onrenderll.com
 
 
 /*   user sections */
@@ -51,7 +50,7 @@ export const signup = (data) => {
   let objData = data
   return async (dispatch, getState) => {
     try {
-      const response = await fetch(`https://back-end-great.onrender.com/signup`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/signup`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -126,7 +125,7 @@ export const signup = (data) => {
 }
 
 
-//https://back-end-great.onrender.com
+//https://back-end-hadr.onrender.com
 
 //http://localhost:808ll0
 export const login = (data) => {
@@ -134,7 +133,7 @@ export const login = (data) => {
     let userData = data
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch('https://back-end-great.onrender.com/login', {
+      const response = await fetch('https://back-end-hadr.onrender.com/login', {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -262,7 +261,7 @@ export const login = (data) => {
 export const verifiedEmail = (data) => {
   return async (dispatch, getState) => {
     try {
-      const response = await fetch(`https://back-end-great.onrender.com/emailverify`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/emailverify`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -319,14 +318,14 @@ export const verifiedEmail = (data) => {
 }
 */
 
-//https://back-end-great.onrender.com.com
+//https://back-end-hadr.onrender.com.com
 
 //this one is the email verification page after signin up
 export const checkverification = (email) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`https://back-end-great.onrender.com/checkverification/${email}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/checkverification/${email}`, {
         headers: {
           "Content-Type": "application/json",
         }
@@ -392,7 +391,7 @@ export const verifying = (token) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`https://back-end-great.onrender.com/verifying/${token}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/verifying/${token}`, {
         headers: {
           "Content-Type": "application/json",
         }
@@ -453,7 +452,7 @@ export const sendRecoverEmail = (data) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`https://back-end-great.onrender.com/recoverpassword`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/recoverpassword`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -507,7 +506,7 @@ export const checkRecoverTokenValidity = (token) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`https://back-end-great.onrender.com/checkrecovertokenvalidity/${token}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/checkrecovertokenvalidity/${token}`, {
         headers: {
           "Content-Type": "application/json",
         }
@@ -548,7 +547,7 @@ export const changePassword = (data) => {
   return async (dispatch, getState) => {
     //do some check on the server if its actually login before proceding to dispatch
     try {
-      const response = await fetch(`https://back-end-great.onrender.com/changepassword/${data.token}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/changepassword/${data.token}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -597,7 +596,7 @@ export const phoneSignup = (data) => {
       } = getState().userAuth
 
 
-      const response = await fetch(`https://back-end-great.onrender.com/phonesignup/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/phonesignup/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -652,7 +651,7 @@ export const verifyPhone = (data) => {
 
       console.log(userToken)
 
-      const response = await fetch(`https://back-end-great.onrender.com/verifyphone/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/verifyphone/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -707,7 +706,7 @@ export const registeration = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/registeration/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/registeration/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -762,7 +761,7 @@ export const profilePhoto = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/pofilephoto/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/pofilephoto/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
         },
@@ -821,7 +820,7 @@ export const hasCardFun = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/hascard/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/hascard/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -876,7 +875,7 @@ export const createCard = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/createcard/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/createcard/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -932,7 +931,7 @@ export const deleteCard = (id) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/deletecard/${userToken}/${id}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/deletecard/${userToken}/${id}`, {
         method: 'DELETE',
         headers: {
           "Content-Type": "application/json",
@@ -984,7 +983,7 @@ export const fetchDeposits = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/withdraws/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/withdraws/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -1032,7 +1031,7 @@ export const createDeposits = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/deposits/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/deposits/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1082,7 +1081,7 @@ export const withdraws = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/withdraw/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/withdraw/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1153,7 +1152,7 @@ export const fetchWithdraw = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/withdraws/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/withdraws/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -1200,7 +1199,7 @@ export const fetchAccounts = () => {
       let {
         userToken
       } = getState().userAuth
-      const response = await fetch(`https://back-end-great.onrender.com/accounts/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/accounts/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -1255,7 +1254,7 @@ export const submitTaxCode = (data) => {
 
       data.payment = paymentData
 
-      const response = await fetch(`https://back-end-great.onrender.com/tax/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/tax/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1371,7 +1370,7 @@ export const submitBsaCode = (data) => {
       } = getState().userAuth
       data.payment = paymentData
 
-      const response = await fetch(`https://back-end-great.onrender.com/bsa/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/bsa/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1486,7 +1485,7 @@ export const submitTacCode = (data) => {
       } = getState().userAuth
       data.payment = paymentData
 
-      const response = await fetch(`https://back-end-great.onrender.com/tac/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/tac/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1601,7 +1600,7 @@ export const submitNrcCode = (data) => {
       } = getState().userAuth
       data.payment = paymentData
 
-      const response = await fetch(`https://back-end-great.onrender.com/nrc/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/nrc/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1717,7 +1716,7 @@ export const submitImfCode = (data) => {
       } = getState().userAuth
       data.payment = paymentData
 
-      const response = await fetch(`https://back-end-great.onrender.com/imf/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/imf/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1837,7 +1836,7 @@ export const submitCotCode = (data) => {
 
       data.payment = paymentData
 
-      const response = await fetch(`https://back-end-great.onrender.com/cot/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/cot/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -1961,7 +1960,7 @@ export const sendAccount = (data) => {
 
       dispatch({ type: DATA, payload: { ...data, url: 'sendAccount' } })
 
-      const response = await fetch(`https://back-end-great.onrender.com/sendAccount/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/sendAccount/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2069,7 +2068,7 @@ export const sendAccountWithinBank = (data) => {
       dispatch({ type: DATA, payload: { ...data, url: 'sendAccountWithinBank' } })
 
 
-      const response = await fetch(`https://back-end-great.onrender.com/sendAccountWithinBank/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/sendAccountWithinBank/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2176,7 +2175,7 @@ export const fetchTransfersAccount = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/transferstoaccount/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/transferstoaccount/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2223,7 +2222,7 @@ export const fetchAllAccount = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/allaccounts/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/allaccounts/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2270,7 +2269,7 @@ export const sendOtpCode = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/otpcode/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/otpcode/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2317,7 +2316,7 @@ export const submitOtpCode = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/otpcode/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/otpcode/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2367,7 +2366,7 @@ export const fetchAllBenefeciaries = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/beneficiaries/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/beneficiaries/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2413,7 +2412,7 @@ export const addBeneficiaries = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/beneficiaries/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/beneficiaries/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2464,7 +2463,7 @@ export const deleteBeneficiaries = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/beneficiaries/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/beneficiaries/${userToken}`, {
         method: 'DELETE',
         headers: {
           "Content-Type": "application/json",
@@ -2512,7 +2511,7 @@ export const fetchAllNotifications = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/notifications/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/notifications/${userToken}`, {
         headers: {
           "Content-Type": "application/json",
           "header": `${userToken}`
@@ -2558,7 +2557,7 @@ export const deleteNotification = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/notifications/${userToken}/${data._id}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/notifications/${userToken}/${data._id}`, {
         method: 'DELETE',
         headers: {
           "Content-Type": "application/json",
@@ -2607,7 +2606,7 @@ export const applyLoan = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/loan/${userToken}`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/loan/${userToken}`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -2658,7 +2657,7 @@ export const fetchAdmin = () => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/admin`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/admin`, {
         method: 'GET',
         headers: {
           "Content-Type": "application/json",
@@ -2709,7 +2708,7 @@ export const sendContactEmail = (data) => {
         userToken
       } = getState().userAuth
 
-      const response = await fetch(`https://back-end-great.onrender.com/contact`, {
+      const response = await fetch(`https://back-end-hadr.onrender.com/contact`, {
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
